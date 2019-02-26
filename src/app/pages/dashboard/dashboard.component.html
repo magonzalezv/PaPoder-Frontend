@@ -1,0 +1,91 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <input #input (keyup)="buscarPublicacion( input.value )" type="text" class="form-control" placeholder="Buscar publicación...">
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+        <div class="col-12">
+
+                <div class="text-right">
+                        <button type="button" class="btn waves-effect waves-light btn-rounded btn-primary m-b-5" data-toggle="modal" data-target=".bd-example-modal-lg">
+                          <i class="fa fa-plus"> </i>
+                          Crear publicación
+                        </button>
+                    </div>
+
+
+                    <div class="row">
+                            <div class="col-12">
+                                <div class="card-columns">
+                                    <div class="card "  *ngFor="let publicacion of publicaciones">
+                                            <img class="card-img-top img-responsive" [src]="publicacion.img | imagen: 'publicacion'" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h4 class="card-title">{{ publicacion.nombre }}</h4>
+                                                <small class="text-muted"><li class="fa fa-calendar"></li> {{ publicacion.fecha | date }}</small>
+                                                <br>
+                                                <small class="text-muted"><li class="fa fa-list-alt"></li> {{ publicacion.categoria | coma }}</small>
+                                                <hr>
+                                                <p class="card-text">{{ publicacion.extracto }}</p>
+                                                <hr>
+                                                <div class="container">
+                                                    <div class="row">
+                                                            <p class="col-md-7 card-text text-success"><li class="fa fa-user-circle">  {{ publicacion.usuario.nombre }}   </li></p>
+                                                            <p class="col-md-3"><li class="fa fa-eye"></li> {{ publicacion.visitas }}</p>
+                                                            <p class="col-md-2"><li class="fa fa-comments"></li>{{publicacion.comentarios}}</p>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn btn-primary btn-block " (click)="actualizarVisitas( publicacion )"  [routerLink]="['/publicacion',publicacion._id]" >Más</a>
+
+                                            </div>
+                                        </div>
+                                   
+                                    
+                                </div>
+                            </div>
+                        </div>     
+         
+        <!-- Row -->
+        <!--<div class="row">
+                
+                <div class="card-columns"  *ngFor="let publicacion of publicaciones">
+                    <div class="card">
+
+                            <img class="card-img-top h-200 img-responsive" [src]="publicacion.img | imagen: 'publicacion'" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">{{ publicacion.nombre }}</h4>
+                                <small class="text-muted"><li class="fa fa-list-alt"></li> {{ publicacion.categoria | coma }}</small>
+                                <hr>
+                                <div class=""><p class="card-text">{{ publicacion.extracto }}</p></div>
+                                <hr>
+                                <div class="container p-0">
+                                    <div class="row text-center">
+                                            <p class="col-md-7 card-text text-success"><small><li class="fa fa-user-circle">  {{ publicacion.usuario.nombre }}   </li></small></p>
+                                            <p class="col-md-3"><li class="fa fa-eye"></li> {{ publicacion.visitas }}</p>
+                                            <p class="col-md-2"><li class="fa fa-comments"></li>{{publicacion.comentarios}}</p>
+                                        
+                                    </div>
+                                </div>
+                                
+                      
+                                <a href="#" class="btn btn-primary btn-block " (click)="actualizarVisitas( publicacion )"  [routerLink]="['/publicacion',publicacion._id]" >Leer más</a>
+                            </div>
+                    </div>
+                  
+                </div>
+            
+            
+        </div>
+        -->
+        <!-- Row --> 
+    </div>
+</div>
+

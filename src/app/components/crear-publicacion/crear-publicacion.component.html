@@ -1,0 +1,73 @@
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="gridModalLabel">Crear publicación</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12">
+                            <form ngNativeValidate [formGroup]="forma" (ngSubmit)="crearPublicacion()" class="form-horizontal">
+                                <div class="form-group" align="center">
+                                        <h3 class="card-title">Título</h3>
+                                    <input formControlName="nombre" type="text" class="form-control" required placeholder="Título de la publicación">
+                                </div> 
+
+                                <div class="row">
+                                        <div class="form-group col-lg-6">
+                                                <h4 class="card-title" align="center">Categoría</h4>
+                                                    <div class="demo-checkbox">
+                                                        <div class="row">
+                                                                <div class="col-md-6">
+                                                                        <input formControlName="categoria" [(ngModel)]="categoria1"   value="Movilidad" type="checkbox" id="md_checkbox_21" class="filled-in chk-col-red" >
+                                                                        <label for="md_checkbox_21">Movilidad</label>
+                                                                        <input formControlName="categoria" [(ngModel)]="categoria2"  value="Cultura" type="checkbox" id="md_checkbox_22" class="filled-in chk-col-pink">
+                                                                        <label for="md_checkbox_22">Cultura</label>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                        <input formControlName="categoria" [(ngModel)]="categoria3"  value="Espacio público" type="checkbox" id="md_checkbox_23" class="filled-in chk-col-purple" >
+                                                                        <label for="md_checkbox_23">Espacio público</label>
+                                                                        <input formControlName="categoria" [(ngModel)]="categoria4" value="Educación" type="checkbox" id="md_checkbox_24" class="filled-in chk-col-deep-purple">
+                                                                        <label for="md_checkbox_24">Educación</label>
+                                                                </div>
+                                                        </div>
+                                                        
+                                                        
+                                                        
+                                                    </div>
+                                                   
+                                                  
+                                        </div>
+                                        <div class="form-group col-lg-6">
+                                                <div class="card m-b-0" align="center">
+                                                            <h4 class="card-title">Imagen de la publicación</h4>
+                                                            <img *ngIf="!imagenTemp" [src]="noImage | imagen" alt="" class="w70">
+                                                            <img *ngIf="imagenTemp" [src]="imagenTemp" alt="" class="w70">
+                                                            <input (change)="seleccionImagen( $event.target.files[0] )" type="file">
+                                                        
+                                                    </div>
+                                         </div>
+                                </div>
+                              
+                                <div class="form-group">
+                                    <p-editor formControlName="descripcion" [style]="{'height':'250px'}"></p-editor>
+
+                                </div>
+                                <hr>
+                                 <!--</button>[disabled]="!imagenTemp"-->
+                                <div class="form-group" align="right">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal"> Cerrar</button>
+                                        <button  type="submit" class="btn btn-success">Crear publicación</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+              
+
+            </div>
+        </div>
+    </div>

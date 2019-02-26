@@ -1,0 +1,174 @@
+/*
+Template Name: Admin pro Admin
+Author: Wrappixel
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+
+
+/*
+Template Name: Admin Pro Admin
+Author: Wrappixel
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+
+
+/*Theme Colors*/
+
+
+/*bootstrap Color*/
+
+
+/*Light colors*/
+
+
+/*Normal Color*/
+
+
+/*Extra Variable*/
+
+
+/*******************
+Login register and recover password Page
+******************/
+
+.login-register {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    padding: 10% 0;
+    position: fixed;
+}
+
+.login-box {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.login-box .footer {
+    width: 100%;
+    left: 0px;
+    right: 0px;
+}
+
+.login-box .social {
+    display: block;
+    margin-bottom: 30px;
+}
+
+#recoverform {
+    display: none;
+}
+
+.login-sidebar {
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.login-sidebar .login-box {
+    right: 0px;
+    position: absolute;
+    height: 100%;
+}
+
+#navwrapper {
+    width: 100%;
+    height: 100px;
+    background-color: #67757c
+}
+
+#navbar {
+    margin: 0 auto;
+    width: 980px;
+    height: 98px;
+}
+
+.tablewrapper {
+    float: right;
+    margin-top: 15px;
+}
+
+.row1 {
+    color: #fff;
+    font-size: 14px;
+    width: 164px;
+    cursor: pointer;
+}
+
+
+.logo i {
+	font-size: 31px;
+	margin-right: 4px;
+	word-spacing: 14px;
+}
+.logo{
+	color: white;
+	margin: 0;
+	font-size: 20px;
+	padding: 4px 0;
+	padding-bottom: 25px;
+
+}
+.login-bottom-text{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 12px;
+	color: white;
+	line-height: 19px;
+}
+
+header{
+	background: #67757c;
+	padding-top: 20px;
+}
+header .form-group{
+	margin-bottom: 0px;
+}
+header .btn-header-login{
+	margin-bottom: 15px;	
+}
+.login-main{
+	margin-top: 130px;
+}
+.multibox{
+	padding-left: 0px;
+	padding-bottom: 10px;
+}
+.login-main span{
+	font-size: 12px;
+} 
+
+.carousel, .carousel-inner .item img {
+    height: 100%;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat left center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .container-fluid {
+    padding: 0px 0px;
+}
+
+.hover-slide {
+    bottom: 90px;
+    position: absolute;
+    /*margin-left: 30%;*/
+    z-index: 10;
+}
+
+@media (min-width: 992px){
+    .modal-lg {
+        max-width: 900px;
+    }
+}
+

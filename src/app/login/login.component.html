@@ -1,0 +1,147 @@
+<div class="modal fade bs-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
+    <div class="modal-dialog  modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img class="img-responsive mx-auto d-block" src="../assets/images/background/titulo.jpg" alt="" style="max-width: 400px;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-justify">
+                   Estimulados, por exigencia de los hechos, a construir ciudad a través de la intensificación de un diálogo ciudadano responsable nos hemos constituido en medio de generación y puesta en circulación de información significativa sin tergiversaciones prejuiciosas. Invitamos a tomar parte en un intercambio esclarecedor de opiniones sobre lo que a todos nos importa.    
+                </p>
+                <p class="text-justify">
+                    La prevalencia, en cierto periodismo local, de la parcialidad que desfigura los hechos o el amarillismo irresponsable que apela a los prejuicios, ha contribuido a generalizar entre la ciudadanía una postura desconfiada frente a la democracia, sus agentes  y sus instituciones, que rechaza o deslegitima los espacios de participación y descarta el debate y la deliberación como estrategias centrales de su fortalecimiento.
+                </p>
+                <p class="text-justify">
+                    El ejercicio de un periodismo diferente, que desde esta plataforma se pone a disposición de la ciudadanía, se constituye en oportunidad de convergencias entre las diferentes perspectivas interesadas que concurren hoy en una ciudad como Cartagena, con grandes opciones de desarrollo pero restringidas por un modelo político y prácticas de gobierno que han privilegiado los intereses particulares sobre los colectivos y públicos.
+                </p>
+                <div class="ribbon-vwrapper-reverse card">
+                        <div class="ribbon ribbon-warning ribbon-vertical-r"><i class="fa fa-check-circle"></i></div>
+                        <h4 class="ribbon-content"><b>Se trata de ser parte activa de una comunidad efectiva de ciudadanos que aportemos al debate público por la ciudad.</b> </h4>
+                    </div>  
+               
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row flex-column-reverse flex-md-row">
+            <div class="col-md-9">
+        
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                      </ol>
+                      <div class="carousel-inner" role="listbox">
+                        <!-- Slide One - Set the background image for this slide in the line below -->
+                        <div class="carousel-item active" style="background-image: url(../assets/images/background/about.jpg); background-size: cover">
+                            <div class="col-md-5 hover-slide text-right"> 
+                                <button type="button" class="btn-lg btn btn-warning" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Más...</button>
+                            </div>
+                            
+                            <div class="carousel-caption d-none d-md-block">
+                          </div>
+                        </div>
+                        <!-- Slide Two - Set the background image for this slide in the line below -->
+                        <div class="carousel-item" style="background-image: url(../assets/images/background/login-register.jpg)">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h3>Second Slide</h3>
+                            <p>This is a description for the second slide.</p>
+                          </div>
+                        </div>
+                        <!-- Slide Three - Set the background image for this slide in the line below -->
+                        <div class="carousel-item" style="background-image: url(../assets/images/background/megamenubg.jpg)">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h3>Third Slide</h3>
+                            <p>This is a description for the third slide.</p>
+                          </div>
+                        </div>
+                      </div>
+                    
+
+                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>        
+            </div>
+        
+            <div class="col-md-3 ">
+                <div class="card">
+                    <div class="card-body">
+                        <form ngNativeValidate #f="ngForm" class="form-horizontal form-material" (ngSubmit)="ingresar( f )">
+                            <a href="javascript:void(0)" class="text-center db"><img src="../assets/images/logo-icon.png" alt="Home" class="logo-login" /><br/><img src="../assets/images/logo-text.png" alt="Home" class="logo-login" /></a>
+                            <div class="form-group m-t-40">
+                                <div class="col-xs-12">
+                                    <input [ngModel]='email' name="email" class="form-control" type="email" required placeholder="Correo del usuario">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <input ngModel name="password" class="form-control" type="password" required placeholder="Contraseña">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <div class="checkbox checkbox-primary pull-left p-t-0">
+                                        <input [(ngModel)]="recuerdame" name="recuerdame" id="checkbox-signup" type="checkbox" class="filled-in chk-col-light-blue">
+                                        <label for="checkbox-signup"> Recuerdame </label>
+                                    </div>
+                                    <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i> ¿Olvidé contraseña?</a> </div>
+                            </div>
+                            <div class="form-group text-center m-t-20">
+                                <div class="col-xs-12">
+                                    <button class="btn btn-info btn-lg btn-block text-uppercase btn-rounded" type="submit">Ingresar</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
+                                    <div class="social">
+                                        <button type="button" id="btnGoogle" class="btn btn-googleplus" data-toggle="tooltip" title="Ingresa con Google"> <i aria-hidden="true" class="fa fa-google-plus"></i> </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group m-b-0">
+                                <div class="col-sm-12 text-center">
+                                    ¿No tienes cuenta? <a routerLink="/register" class="text-primary m-l-5"><b>Crear cuenta</b></a>
+                                </div>
+                            </div>
+                        </form>
+                        <form class="form-horizontal" id="recoverform" action="index.html">
+                            <div class="form-group ">
+                                <div class="col-xs-12">
+                                    <h3>Recuperar contraseña</h3>
+                                    <p class="text-muted">Ingresa tu correo electrónico y siga los pasos </p>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-xs-12">
+                                    <input class="form-control" type="text" required="" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group text-center m-t-20">
+                                <div class="col-xs-12">
+                                    <button class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Reset</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+            
+            </div>
+    </div>
+   
+</div>
+
+

@@ -1,0 +1,45 @@
+<div class="row">
+  
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Publicaciones</h4>
+        <table class="table table-hover" *ngIf="publicaciones.length > 0">
+          <tbody>
+            <tr *ngFor="let publicacion of publicaciones" [routerLink]="['/publicacion', publicacion._id]" class="pointer" >
+              <td>
+                <img [src]="publicacion.img | imagen" class="img-50 ">
+              </td>
+              <td>{{ publicacion.nombre }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="alert alert-info" *ngIf="publicaciones.length === 0">
+            No hay registros
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Usuarios</h4>
+          <table class="table table-hover"  *ngIf="usuarios.length > 0">
+            <tbody>
+              <tr *ngFor="let usuario of usuarios" [routerLink]="['/usuario', usuario._id]" class="pointer" >
+                <td>
+                 <img [src]="usuario.img | imagen" class="img-50 ">
+                </td>
+                <td>{{ usuario.nombre }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="alert alert-info" *ngIf="usuarios.length === 0">
+            No hay registros
+        </div>
+        </div>
+      </div>
+    </div>
+
+</div>
